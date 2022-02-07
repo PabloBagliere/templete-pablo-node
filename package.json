@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node build/src/server.js",
+    "start": "node build/src/index.js",
     "dev": "nodemon",
     "lint": "eslint --fix src/**/*.{js,ts}",
     "prettier": "prettier **/*.{js,json,md,ts} --write",
@@ -15,9 +15,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "dotenv": "16.0.0"
+    "cors": "^2.8.5",
+    "dotenv": "16.0.0",
+    "express": "^4.17.2",
+    "obs-websocket-js": "^4.0.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
     "@types/jest": "27.4.0",
     "@types/node": "17.0.14",
     "@typescript-eslint/eslint-plugin": "5.10.2",
